@@ -30,3 +30,37 @@ graph TD
     H --> I[Server responds with notes in JSON format]
     I -->|Notes in JSON received| J[JavaScript updates the user interface with the notes]
 ```
+
+<h1 align="center">
+Single page application diagram
+</h1>
+
+```mermaid
+graph TD
+    %% Acceso a la SPA
+    A[User accesses https://studies.cs.helsinki.fi/exampleapp/spa] --> B[Browser sends a GET request to the server]
+    B --> C[Server responds with the HTML file]
+    C --> D[Browser loads the HTML file]
+    D --> E[Browser sends GET requests for CSS and JavaScript files]
+    E --> F[Server responds with the CSS and JavaScript files]
+    F --> G[Browser loads and executes the CSS and JavaScript files]
+    G --> H[JavaScript executes and sends a GET request for notes to the server]
+    H --> I[Server responds with notes in JSON format]
+    I --> J[JavaScript updates the user interface with the notes]
+
+    %% Creación de una nueva nota
+    K[User writes a new note in the text field] --> L[User clicks the Save button]
+    L --> M[JavaScript sends a POST request to the server with the new note]
+    M --> N[Server receives the request and processes the new note]
+    N --> O[Server saves the note in the database]
+    O --> P[Server responds with the new note in JSON format]
+    P --> Q[JavaScript receives the response]
+    Q --> R[JavaScript updates the user interface with the new note]
+
+    %% Comentarios explicativos
+    C -. "HTML received" .-> D
+    F -. "CSS and JavaScript received" .-> G
+    I -. "Notes in JSON received" .-> J
+    M -. "POST request with new note" .-> N
+    P -. "New note in JSON received" .-> Q
+```

@@ -1,4 +1,6 @@
-# New note diagram
+<h1 align="center">
+New note diagram
+</h1>
 
 ```mermaid
 graph TD
@@ -12,7 +14,10 @@ graph TD
 ```
 
 
-# Single page application diagram
+<h1 align="center">
+Single page application diagram
+</h1>
+
 ```mermaid
 graph TD
     A[User accesses https://studies.cs.helsinki.fi/exampleapp/spa] --> B[Browser sends a GET request to the server]

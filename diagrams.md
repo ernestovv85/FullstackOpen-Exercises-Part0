@@ -1,3 +1,5 @@
+# New note diagram
+
 ```mermaid
 graph TD
     A[User writes a new note in the text field] --> B[User clicks Save button]
@@ -9,6 +11,8 @@ graph TD
     G -->H[Browser refreshes list of notes on page]
 ```
 
+
+# Single page application diagram
 ```mermaid
 graph TD
     A[User accesses https://studies.cs.helsinki.fi/exampleapp/spa] --> B[Browser sends a GET request to the server]

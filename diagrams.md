@@ -9,6 +9,6 @@ graph TD
     G -->H[Browser refreshes list of notes on page]
 
     
-    C -- POST Request--> D
-    F -- Response with the new note --> G
+    C -- "POST Request"--> D
+    F -- "Response with the new note" --> G
 ```

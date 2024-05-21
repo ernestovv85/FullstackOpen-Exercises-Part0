@@ -9,4 +9,15 @@ graph TD
     G -->H[Browser refreshes list of notes on page]
 ```
 
-
+```mermaid
+graph TD
+    A[User accesses https://studies.cs.helsinki.fi/exampleapp/spa] --> B[Browser sends a GET request to the server]
+    B --> C[Server responds with the HTML file]
+    C -->|HTML received| D[Browser loads the HTML file]
+    D --> E[Browser sends GET requests for CSS and JavaScript files]
+    E --> F[Server responds with the CSS and JavaScript files]
+    F -->|CSS and JavaScript received| G[Browser loads and executes the CSS and JavaScript files]
+    G --> H[JavaScript executes and sends a GET request for notes to the server]
+    H --> I[Server responds with notes in JSON format]
+    I -->|Notes in JSON received| J[JavaScript updates the user interface with the notes]
+```

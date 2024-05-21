@@ -47,7 +47,9 @@ graph TD
     G --> H[JavaScript executes and sends a GET request for notes to the server]
     H --> I[Server responds with notes in JSON format]
     I -.Notes in JSON received.-> J[JavaScript updates the user interface with the notes]
-    K[User writes a new note in the text field] --> L[User clicks the Save button]
+
+    %% Create new note
+    J --> K[User writes a new note in the text field] --> L[User clicks the Save button]
     L --> M[JavaScript sends a POST request to the server with the new note]
     M -.POST request with new note.-> N[Server receives the request and processes the new note]
     N --> O[Server saves the note in the database]
